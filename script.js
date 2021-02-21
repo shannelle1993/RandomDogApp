@@ -1,17 +1,12 @@
-const dogResult = document.getElementById('dog-result');
-const dogButton = document.getElementById('dogButton');
+const dogResult = document.getElementById("dog-result");
+const dogButton = document.getElementById("dogButton");
 
-dogButton.addEventListener('click', getRandomDog);
+dogButton.addEventListener("click", getRandomDog);
 
 function getRandomDog() {
-    fetch('https://random.dog/woof.json')
-        .then(res => res.json())
-        .then(data => {
-            if(data.url.includes('.mp4' || '.jpg')) {
-                getRandomDog()
-            } else {
-            dogResult.innerHTML = `<img src="${data.url}"/>`
-            }
+    fetch("https://dog.ceo/api/breeds/image/random")
+        .then((res) => res.json())
+        .then((data) => {
+            dogResult.innerHTML = `<img src="${data.message}"/>`;
         });
-}
-
+    }
