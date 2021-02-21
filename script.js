@@ -7,10 +7,10 @@ function getRandomDog() {
     fetch('https://random.dog/woof.json')
         .then(res => res.json())
         .then(data => {
-            if(data.url.includes('.jpg')) {
+            if(data.url.includes('.mp4' || '.jpg')) {
                 getRandomDog()
             } else {
-            dogResult.innerHTML = `<img src="${data.fileSizeBytes}"`
+            dogResult.innerHTML = `<img src="${data.url}"/>`
             }
         });
 }
