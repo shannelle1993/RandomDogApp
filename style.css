@@ -1,0 +1,21 @@
+h1 {
+color:dimgray;
+font-family: 'Courier New', Courier, monospace;
+text-align: center;
+}
+
+p {
+    color:dimgray;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    }
+
+#dogButton {
+    background-color: rgb(91, 142, 194);
+    color:floralwhite;
+    font-size: xx-large;
+    font-family: 'Courier New', Courier, monospace;
+    margin: auto;
+    display: block;
+    
+}
